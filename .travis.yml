@@ -29,3 +29,7 @@ script:
   - cd app
   - vendor/bin/phpunit
   - php bootstrap/web.php get / || php bin/page.php get /
+  - composer create-project --stability="dev" --no-interaction bear/skeleton app-dev
+  - cd app-dev
+  - vendor/bin/phpunit
+  - php bootstrap/web.php get / || php bin/page.php get /
